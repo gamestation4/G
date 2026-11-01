@@ -36,7 +36,7 @@ const lines = [];
 function hostOk() {
     var m = document.getElementById("msgs");
     if (m) {
-        m.innerHTML = "تم تحميل الجولد هين بنجاح ... تمتع باللعب";
+        m.innerHTML = "تم تحميل الجولد هين بنجاح ...اغلق المتصفح وتمنع باللعب";
     }
 }
 
