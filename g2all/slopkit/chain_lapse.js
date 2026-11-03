@@ -272,7 +272,7 @@ function makeRpc(worker) {
                 + "   " + KPATCH_JMP_SITES.length + " gateable jump site(s): "
                 + KPATCH_JMP_SITES.slice(0, 12)
                     .map(function (v) { return "0x" + v.toString(16); }).join(" ")
-            : (kpatchName ? "NOT LOADED (" + kpatchName + ") -- stage 9 will not run"
+            : (kpatchName ? "NOT  (" + kpatchName + ") -- stage 9 will not run"
                           : "no firmware key, so no blob name -- stage 9 will not run"));
 
         let payload = null;
@@ -286,7 +286,7 @@ function makeRpc(worker) {
             ? "bytes=" + payload.length + " head=" + hexBytes(payload.subarray(0, 12))
                 + (payload[0] === 0xe9 ? " entry=e9-jmp-rel32"
                                        : " entry=NOT-e9")
-            : "NOT LOADED -- stage 10 will not run");
+            : "NOT  -- stage 10 will not run");
 
         const ITERS = params.has("iters") ? parseInt(params.get("iters"), 10) : 400;
         const SPRAY_NUM = params.has("spray")
@@ -676,7 +676,7 @@ function makeRpc(worker) {
                 mark("ALREADY-ROOT", "getuid=" + uid0 + " setuid(0)=" + su0);
                 var m = document.getElementById("msgs");
                 if (m) {
-                    m.innerHTML = "GoldHEN is Already Loaded ...";
+                    m.innerHTML = "تم تحميل الجولد هين بنجاح ... اغلق المتصفخ وتمتع باللعب";
                 }
                 return;
             }
