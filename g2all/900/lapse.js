@@ -1696,7 +1696,7 @@ export async function kexploit() {
     }
     
     if (localStorage.ExploitLoaded === "yes" && sessionStorage.ExploitLoaded != "yes") {
-        msgs.innerHTML = "GoldHEN is Already Loaded ...";
+        msgs.innerHTML = "تم تحميل الجولد هين بالفعل ... اغلق المتصفح وتمتع باللعب";
         return new Promise(() => {});
     }
  
@@ -1830,7 +1830,7 @@ function runPayload(PLfile) {
 }
 
 function hostFail() {
-    msgs.innerHTML = "Failed to Load! Restart Your Console ...";
+    msgs.innerHTML = "فشل تشغيل الجولد هين ... اعد تشغيل الجهاز واعد المحاوله";
     msgs.style.color = "yellow";
 }
 
@@ -1838,7 +1838,7 @@ kexploit().then(() => {
     setTimeout(() => {
         try {
             runPayload("./goldhen_2.4b18.12.bin");
-            msgs.innerHTML = "GoldHEN v2.4b18.12 Loaded ...";
+            msgs.innerHTML = "تم تحميل الجولد هين بنجاح ... اغلق المتصفح وتمتع باللعب";
         } catch (e) {
             hostFail();
         }
